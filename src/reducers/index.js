@@ -7,7 +7,6 @@ function comments(state = [], action) {
   return state;
 }
 
-
 function contacts(state = [], action) {
   if (action.type === "CONTACTS_LOADED") {
     return action.value;
@@ -15,8 +14,22 @@ function contacts(state = [], action) {
   return state;
 }
 
+function vehicles(state = [], action) {
+  if (action.type === "VEHICLES_LOADED") { 
+    return action.value;
+  }
+  return state;
+}
+
+function products(state = [], action) {
+  if (action.type === "PRODUCTS_LOADED") { 
+    return action.value;
+  }
+  return state;
+}
+
 const rootReducer = combineReducers({
-  comments, contacts
+  comments, contacts, vehicles, products
 });
 
 

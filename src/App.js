@@ -1,10 +1,10 @@
-import React, { Component } from "react";
 import "./App.css";
 import ContactsContainer from "./containers/ContactsContainer";
 import ProductsContainer from "./containers/ProductsContainer";
 import VehiclesContainer from "./containers/VehiclesContainer";
 import CommentsContainer from "./containers/CommentsContainer";
 import CreateThingsContainer from "./containers/CreateThingsContainer";
+import React, { Component } from "react";
 
 
 class App extends Component {
@@ -18,6 +18,8 @@ class App extends Component {
   componentDidMount() {
     this.props.getContacts();
     this.props.getComments();
+    this.props.getVehicles();
+    this.props.getProducts();
   }
   
   render() {

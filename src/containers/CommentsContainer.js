@@ -1,16 +1,11 @@
+
 import { connect } from "react-redux";
 import Comments from "../components/Comments";
-import {loadComments} from "../actions";
 
-function mapDispatchToProps(dispatch) {
+function mapStateToProps(state) {
   return {
-    getComments: () => {
-      const action = loadComments();
-      dispatch(action);
-    }
+    comments: state.comments
   };
 }
 
-
-
-export default connect(null,mapDispatchToProps)(Comments);
+export default connect(mapStateToProps)(Comments);
